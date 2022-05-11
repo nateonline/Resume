@@ -5,5 +5,8 @@ using NatesJauntyTools;
 
 public class App : Singleton<App>
 {
-
+	private void Start()
+	{
+		Debug.Log("Test");
+	}
 }
