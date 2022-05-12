@@ -25,11 +25,14 @@ public class CameraController : Script, Subscriber
 		IEnumerator MoveRoutine()
 		{
 			Vector3 startPosition = transform.position;
+			float endTime = Time.time + moveDuration;
+			float timer = 0;
 
-			for (float timer = 0f; timer <= moveDuration; timer += Time.deltaTime)
+			while (Time.time < endTime)
 			{
+				timer += Time.deltaTime;
 				transform.position = Vector3.LerpUnclamped(startPosition, area.Position, moveCurve.Evaluate(timer / moveDuration));
-				yield return null;
+				yield return new WaitForEndOfFrame();
 			}
 
 			transform.position = area.Position;
