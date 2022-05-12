@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Sanchez-Regular SDF
+  m_Name: Sanchez
   m_EditorClassIdentifier: 
   hashCode: 1506857710
   material: {fileID: 168249635658802190}
