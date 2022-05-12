@@ -5,8 +5,25 @@ using NatesJauntyTools;
 
 public class App : Singleton<App>
 {
-	private void Start()
+	#region Managers
+
+	[SerializeField] SubscriberManager subscriberManager;
+	public static SubscriberManager SubscriberManager => _.subscriberManager;
+
+	#endregion
+
+
+	#region Mono
+
+	protected override void PostInitialize()
 	{
-		Debug.Log("Test");
+		SubscriberManager.Setup();
 	}
+
+	void OnDestroy()
+	{
+		SubscriberManager.Shutdown();
+	}
+
+	#endregion
 }

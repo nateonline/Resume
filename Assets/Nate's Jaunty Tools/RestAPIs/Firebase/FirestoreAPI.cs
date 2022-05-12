@@ -45,5 +45,21 @@ namespace NatesJauntyTools.Firebase
 		{
 			return await Patch<T>(BaseURL + path, document);
 		}
+
+		public async void GetCollection<T>(string path, Action<List<T>> callback) where T : Document
+		{
+			callback?.Invoke(await GetCollectionAsync<T>(path));
+		}
+
+		public async Task<List<T>> GetCollectionAsync<T>(string path) where T : Document
+		{
+			string json = await GetRaw(BaseURL + path);
+			if (json == null) return new List<T>();
+
+			int trim = 17; // Removes "documents" prefix
+			string modifiedJson = json.Substring(trim, json.Length - (trim + 3)); // Removes last line and last "}"
+
+			return JsonConvert.DeserializeObject<List<T>>(modifiedJson);
+		}
 	}
 }

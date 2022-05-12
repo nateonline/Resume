@@ -49,6 +49,25 @@ namespace NatesJauntyTools.RestAPIs
 
 		#region Requests
 
+		protected async Task<string> GetRaw(string url, Dictionary<string, string> headers = null)
+		{
+			UnityWebRequest request = UnityWebRequest.Get(url);
+			PopulateHeaders(request, headers);
+
+			await TrackAndSendRequest(request);
+
+			ResponseCode responseCode = request.ResponseCodeEnum();
+			if (responseCode.IsSuccess())
+			{
+				return request.downloadHandler.text;
+			}
+			else
+			{
+				LogRestError(request);
+				return null;
+			}
+		}
+
 		protected async Task<T> Get<T>(string url, Dictionary<string, string> headers = null)
 		{
 			UnityWebRequest request = UnityWebRequest.Get(url);
