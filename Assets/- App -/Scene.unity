@@ -625,6 +625,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentArea: {fileID: 0}
+--- !u!114 &728928187 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3798013972971249386, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
+  m_PrefabInstance: {fileID: 1877978434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33314c3c5e938ed429deb581e459f81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730064054
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +974,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3798013972971249387, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
   m_PrefabInstance: {fileID: 3798013971213658363}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757607441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3798013972971249386, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
+  m_PrefabInstance: {fileID: 3798013971213658363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33314c3c5e938ed429deb581e459f81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1877978434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -975,9 +997,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2107524077}
     - target: {fileID: 3798013972971249386, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
-      propertyPath: northArea
+      propertyPath: southArea
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1757607441}
     - target: {fileID: 3798013972971249387, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1306,7 +1328,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3798013971962045983, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
       propertyPath: m_text
-      value: Home
+      value: Nate Taylor's Resume
       objectReference: {fileID: 0}
     - target: {fileID: 3798013972055814333, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
       propertyPath: m_Camera
@@ -1315,7 +1337,7 @@ PrefabInstance:
     - target: {fileID: 3798013972971249386, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
       propertyPath: northArea
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 728928187}
     - target: {fileID: 3798013972971249387, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1364,5 +1386,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Home
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6010498736592086065, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a66a5187b9bdab4ca9cc19254458d0e, type: 3}
