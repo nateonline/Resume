@@ -31,7 +31,6 @@ public class AreaManager : Script
 
 	public void GoTo(Area newArea)
 	{
-		Debug.Log($"Manager: GoTo({newArea.name})");
 		if (!areas.Contains(newArea)) areas.Add(newArea);
 		currentArea = newArea;
 		OnGoToArea?.Invoke(newArea);
